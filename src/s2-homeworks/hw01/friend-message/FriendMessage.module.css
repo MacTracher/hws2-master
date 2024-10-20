@@ -1,0 +1,107 @@
+
+.friendMessage {
+
+}
+
+.friendImageAndText {
+    display: flex;
+    align-items: flex-end;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.friendImageAndText img {
+    height: 45px;
+    width: 45px;
+
+}
+
+.friendText {
+    background: #F5F7FB;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.friendMessageText {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 16px;
+
+
+}
+
+.friendTime {
+
+    font-weight: 600;
+    font-size: 10px;
+    margin-left: 7px;
+}
+/*.friendMessage {*/
+/*    display: flex;*/
+/*    flex-direction: row; !* Стандартний напрямок для вирівнювання зліва *!*/
+/*    justify-content: flex-start; !* Вирівнюємо по лівій стороні *!*/
+/*    align-items: flex-start; !* Вирівнюємо аватар і текст по верху *!*/
+/*    margin-right: auto; !* Додаємо автоматичний відступ справа для вирівнювання вліво *!*/
+/*    max-width: 70%; !* Обмежуємо максимальну ширину повідомлення *!*/
+/*    padding: 10px;*/
+/*    background-color: #e0e0e0; !* Фоновий колір для наочності *!*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.friendImageAndText {*/
+
+/*}*/
+
+/*.friendImageAndText img {*/
+/*    height: 48px;*/
+/*    width: 48px;*/
+/*    border-radius: 50%; !* Додаємо заокруглення для аватарів *!*/
+/*    margin-right: 10px;*/
+
+
+
+/*    !*height: 48px;*!*/
+/*    !*width: 48px;*!*/
+/*}*/
+
+/*.friendText {*/
+
+/*}*/
+
+/*.friendText:after {*/
+
+/*}*/
+
+/*.friendName {*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+/*.friendMessageText {*/
+/*    white-space: pre-wrap; !* Дозволяє переносити текст та зберігати форматування *!*/
+/*    word-wrap: break-word; !* Переносить слова, якщо вони занадто довгі *!*/
+/*    word-break: break-word; !* Додатковий перенос довгих слів *!*/
+/*    font-size: 16px;*/
+/*    line-height: 1.4;*/
+/*}*/
+
+/*.friendTime {*/
+/*    font-size: 12px;*/
+/*    color: #999;*/
+/*    margin-top: 5px;*/
+/*}*/
