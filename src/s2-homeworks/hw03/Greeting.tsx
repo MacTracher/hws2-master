@@ -1,15 +1,17 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    onBlur: any // need to fix any
-    onEnter: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
-    lastUserName?: any // need to fix any
+    name: string // need to fix any
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
+    addUser: () => void // need to fix any
+    onBlur: () => void // need to fix any
+    onEnter: (e: KeyboardEvent<HTMLInputElement>) => void // need to fix any
+    error: string // need to fix any
+    totalUsers: number // need to fix any
+    lastUserName?: string // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -25,7 +27,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     } // деструктуризация пропсов
 ) => {
-    const inputClass = s.errorInput // need to fix with (?:)
+    const inputClass = error ? s.errorInput : s.input // need to fix with (?:)
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
@@ -38,30 +40,30 @@ const Greeting: React.FC<GreetingPropsType> = (
 
             <div className={s.inputAndButtonContainer}>
                 <div>
-                    <input
-                        id={'hw3-input'}
+                    <TextField
+                        style={{margin:'10px 10px 10px 0'}}
                         value={name}
                         onChange={setNameCallback}
                         className={inputClass}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
+                        size={'small'}
+                        id="outlined-basic"
+                        label="" variant="outlined"
                     />
-                    <div id={'hw3-error'} className={s.error}>
+                    <div  id={'hw3-error'} className={s.error}>
                         {error}
                     </div>
                 </div>
 
-                <button
-                    id={'hw3-button'}
-                    onClick={addUser}
-                    className={s.button}
-                    disabled={!name.trim()}
-                >
-                    add
-                </button>
+                <Button id={'hw3-button'}
+                        onClick={addUser}
+                        style={{height: '36px', marginTop:'11px'}}
+                        className={s.button}
+                        disabled={!name.trim()} variant="contained">add</Button>
             </div>
 
-            {lastUserName && (
+            {!error && lastUserName && (
                 <div className={s.greeting}>
                     Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                 </div>
