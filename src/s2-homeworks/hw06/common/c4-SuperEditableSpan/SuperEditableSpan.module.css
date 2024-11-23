@@ -1,7 +1,12 @@
 .spanBlock {
+    display: flex;
+    align-items: center;
 }
 
 .span {
+    color: #0080ff;
+    text-transform: capitalize;
+    font-weight: 500;
 }
 
 .input {
